@@ -148,7 +148,7 @@ class ParkingLot
             parkingSpaces[slot-1] = false;
             totalFilled--;
         }
-        Vehicle findDepartingCar(int t)
+        Vehicle findDepartingCar(int t) //Takes input of ticket number
         {
             for(int i=0;i<v.size();++i)
             {
@@ -202,6 +202,13 @@ void carArrival(ParkingLot& pl)
 
 void carDeparture(ParkingLot& pl)
 {
+	if(pl.getTotalFilled() == 0){
+		cout<<"No Car Available in your Parking Lot";
+		cout<<"\nEnter any key to go back to main menu..";
+		cin.ignore();
+		cin.ignore();
+		return;
+	}
     int ticketno;
     cout<<"Enter ticket number: ";
     cin>>ticketno;
