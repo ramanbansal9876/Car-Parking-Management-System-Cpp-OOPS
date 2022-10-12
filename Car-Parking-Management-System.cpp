@@ -288,6 +288,16 @@ int main()
         cout<<"\n4. Exit";
         cout<<"\nSelect an option (1,2 or 3): ";
         cin>>choice;
+        while(choice<0 || choice>4){
+        	system("cls");
+        	cout<<"Invalid Choice!!";
+		    cout<<"\n\n1. Arrival of a car";
+		    cout<<"\n2. Departure of a car";
+		    cout<<"\n3. Display details";
+		    cout<<"\n4. Exit";
+		    cout<<"\nSelect an option (1,2,3 or 4): ";
+		    cin>>choice;
+		}
         system("cls");
         switch(choice)
         {
